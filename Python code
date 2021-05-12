@@ -1,6 +1,59 @@
 import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_curve
 from pandas_profiling import ProfileReport
 
-file = pd.read_csv(heart.csv'
+#Load data
+file = pd.read_csv('/home/leandro/Desktop/datast/heart.csv')
+features = ['age','sex','cp','trestbps','chol','fbs','restecg','thalach','exang','oldpeak','slope','ca','thal' ]
+target = 'target'
+X = np.array(file[features])
+Y = np.array(file[target])
+
+#Profiling report
 profile = ProfileReport(file, title='HeartDF' )
 profile.to_file("your_report.html")
+
+# Train/Test data
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y)
+lreg = LogisticRegression(max_iter=2000)
+
+#Fit model / predict
+lreg.fit(X_train, Y_train)
+y_pred = lreg.predict(X_test)
+
+#plot classification report
+plt.figure(figsize=(9,4))
+clf_report = classification_report(Y_test,y_pred,target_names=[0,1],  output_dict=True)
+sns.heatmap(pd.DataFrame(clf_report).iloc[:-1, :].T, annot=True, cmap="YlGnBu" )
+plt.savefig('CLreport.png')
+plt.show()
+
+#plot confusion matrix
+cm = confusion_matrix(Y_test, y_pred)
+sns.heatmap(cm, annot=True, fmt='g')
+plt.xlabel('Predicted')
+plt.ylabel('True')
+plt.savefig('CM.png')
+plt.show()
+
+#Plot ROC curve
+logit_roc_auc = roc_auc_score(Y_test, lreg.predict(X_test))
+fpr, tpr, thresholds = roc_curve(Y_test, lreg.predict_proba(X_test)[:,1])
+plt.figure()
+plt.plot(fpr, tpr, label='Logistic Regression (area = %0.2f)' % logit_roc_auc)
+plt.plot([0, 1], [0, 1],'r--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver operating characteristic')
+plt.legend(loc="lower right")
+plt.savefig('Log_ROC.png')
+plt.show()
