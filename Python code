@@ -10,7 +10,7 @@ from sklearn.metrics import roc_curve
 from pandas_profiling import ProfileReport
 
 #Load data
-file = pd.read_csv('/home/leandro/Desktop/datast/heart.csv')
+file = pd.read_csv('heart.csv')
 features = ['age','sex','cp','trestbps','chol','fbs','restecg','thalach','exang','oldpeak','slope','ca','thal' ]
 target = 'target'
 X = np.array(file[features])
@@ -43,7 +43,7 @@ plt.ylabel('True')
 plt.savefig('CM.png')
 plt.show()
 
-#Plot ROC curve
+#Plot ROC 
 logit_roc_auc = roc_auc_score(Y_test, lreg.predict(X_test))
 fpr, tpr, thresholds = roc_curve(Y_test, lreg.predict_proba(X_test)[:,1])
 plt.figure()
