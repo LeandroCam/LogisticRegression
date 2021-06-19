@@ -117,7 +117,7 @@ plt.show()
 
 
     
-![png](Log_files/Log_10_0.png)
+![Pie](https://user-images.githubusercontent.com/83521233/122651039-a13eeb00-d10c-11eb-80cd-ef5cc5ef239a.png)
     
 
 
@@ -150,7 +150,7 @@ plt.show()
 
 
     
-![png](Log_files/Log_12_0.png)
+![CLF](https://user-images.githubusercontent.com/83521233/122651035-9dab6400-d10c-11eb-9702-da3a96af731e.png)
     
 
 
@@ -193,7 +193,7 @@ plt.show()
 
 
     
-![png](Log_files/Log_16_0.png)
+![Clf1](https://user-images.githubusercontent.com/83521233/122651033-9c7a3700-d10c-11eb-830d-08b3ad69f5d4.png)
     
 
 
@@ -214,7 +214,7 @@ plt.show()
 
 
     
-![png](Log_files/Log_18_0.png)
+![CM](https://user-images.githubusercontent.com/83521233/122651036-9f752780-d10c-11eb-89b5-f455e77738a8.PNG)
     
 
 
@@ -239,7 +239,7 @@ plt.show()
 
 
     
-![png](Log_files/Log_20_0.png)
+![png](https://user-images.githubusercontent.com/83521233/122651040-a2701800-d10c-11eb-9328-6654c91f70c5.png)
     
 
 
