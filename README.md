@@ -61,7 +61,7 @@ plt.show()
 
 
     
-![png](Log_files/Log_7_1.png)
+![Pie](https://user-images.githubusercontent.com/83521233/122651039-a13eeb00-d10c-11eb-80cd-ef5cc5ef239a.png)
     
 
 
@@ -117,7 +117,7 @@ plt.show()
 
 
     
-![Pie](https://user-images.githubusercontent.com/83521233/122651039-a13eeb00-d10c-11eb-80cd-ef5cc5ef239a.png)
+![Fi]((https://user-images.githubusercontent.com/83521233/122651205-b49e8600-d10d-11eb-9399-9ddcbc0357b7.png)
     
 
 
