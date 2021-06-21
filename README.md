@@ -24,7 +24,7 @@ Now let's analyse the data
 
 
 ```python
-file = pd.read_csv('/home/leandro/Desktop/datast/heart.csv')
+file = pd.read_csv('heart.csv')
 features = ['age','sex','cp','trestbps','chol','fbs','restecg','thalach','exang','oldpeak','slope','ca','thal' ]
 target = 'target'
 X = np.array(file[features])
