@@ -117,7 +117,7 @@ plt.show()
 
 
     
-![Fi]((https://user-images.githubusercontent.com/83521233/122651205-b49e8600-d10d-11eb-9399-9ddcbc0357b7.png)
+![Fi](https://user-images.githubusercontent.com/83521233/122651205-b49e8600-d10d-11eb-9399-9ddcbc0357b7.png)
     
 
 
