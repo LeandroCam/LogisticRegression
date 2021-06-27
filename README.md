@@ -41,6 +41,8 @@ profile.to_file("your_report.html")
 ![ProfiingReport](https://user-images.githubusercontent.com/83521233/118054143-21c73a80-b35c-11eb-91c2-44e658cdcd35.png)
 
 We have no missing cells, and 13 features to reach the target (0 no presence or 1 presence)
+Why we do not use feature scaling in this dataset? Because in this model it only help to speedy up the model training but our dataset is small so speedy is not a issue here. 
+
 
 
 ```python
